@@ -1,0 +1,22 @@
+{
+  "name": "formd",
+  "version": "0.0.1",
+  "description": "Turn Google Form responses into markdown.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newslynx/formd"
+  },
+  "author": "Michael Keller",
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "~0.6.1",
+    "request": "~2.34.0",
+    "indian-ocean": "0.0.9",
+    "dsv": "0.0.3"
+  },
+  "preferGlobal": true
+}
