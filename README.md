@@ -1,7 +1,7 @@
-csv-to-md
+Formd
 ===
 
-Command-line utilty for turning a Google results spreadsheet into markdown. Needs a better name.
+Command-line utilty for turning a Google results spreadsheet into markdown.
 
 ## Installation
 
