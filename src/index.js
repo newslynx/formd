@@ -3,16 +3,18 @@ var fs = require('fs'),
 		dsv = require('dsv'),
 		io = require('indian-ocean');
 
-
 function fetchGoogleSpreadsheet(key, cb){
 	request('https://docs.google.com/spreadsheet/pub?key='+key+'&output=csv', function(err, response, body){
 		cb( err, dsv.csv.parse(body) )
 	})
 }
+
 function fetchData(inputFilePath, isGoogleForm, cb){
 	if (!isGoogleForm){
 		// Read in data as json
-		cb( io.readDataSync(inputFilePath) );
+		io.readData(inputFilePath, function(err, data){
+			cb(data)
+		});
 	} else {
 		fetchGoogleSpreadsheet(inputFilePath, function(err, result){
 			cb(result);
