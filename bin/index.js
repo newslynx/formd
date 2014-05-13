@@ -3,7 +3,7 @@
 var optimist = require('optimist'),
     path     = require('path'),
     io       = require('indian-ocean'),
-    formd    = require('../index.js');
+    formd    = require('../src/index.js');
 
 var argv = optimist.usage('Usage: $0')
     .options('h', {
