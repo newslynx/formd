@@ -5,7 +5,7 @@ var optimist = require('optimist'),
     io       = require('indian-ocean'),
     formd    = require('../src/index.js');
 
-var argv = optimist.usage('Usage: $0')
+var argv = optimist.usage('Usage: `formd path/to/file.csv` or `formd spreadsheet-key`')
     .options('h', {
       alias: 'help',
       describe: 'display this help text'

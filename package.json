@@ -1,6 +1,6 @@
 {
   "name": "formd",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Turn Google Form responses into markdown.",
   "main": "./src/index.js",
   "bin": {
