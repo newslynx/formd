@@ -1,7 +1,8 @@
 var fs = require('fs'),
 		request = require('request'),
 		dsv = require('dsv'),
-		io = require('indian-ocean');
+		io = require('indian-ocean'),
+		mdpdf = require('markdown-pdf');
 
 function fetchGoogleSpreadsheet(key, cb){
 	request('https://docs.google.com/spreadsheet/pub?key='+key+'&output=csv', function(err, response, body){
@@ -38,7 +39,9 @@ function convertToMarkdown(inputFilePath, outputFilePath, isGoogleForm){
 			}
 		});
 		fs.writeFileSync(outputFilePath, markdown);
-		
+		mdpdf().from(outputFilePath).to(outputFilePath.replace('\.md','.pdf'), function () {
+		  console.log('PDF written.')
+		})		
 	});
 }
 

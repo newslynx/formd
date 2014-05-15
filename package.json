@@ -1,6 +1,6 @@
 {
   "name": "formd",
-  "version": "0.0.4",
+  "version": "0.1.4",
   "description": "Turn Google Form responses into markdown.",
   "main": "./src/index.js",
   "bin": {
@@ -19,7 +19,8 @@
     "optimist": "~0.6.1",
     "request": "~2.34.0",
     "indian-ocean": "0.0.10",
-    "dsv": "0.0.3"
+    "dsv": "0.0.3",
+    "markdown-pdf": "~2.2.0"
   },
   "preferGlobal": true
 }
